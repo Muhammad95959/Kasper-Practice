@@ -10,7 +10,6 @@
 }
 html {
   scroll-behavior: smooth;
-  background-color: #333;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -35,6 +34,48 @@ body {
     width: 1170px;
   }
 }
+
+/*start components*/
+.special-heading {
+  margin: 80px auto;
+  text-align: center;
+}
+.special-heading h2 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  text-transform: uppercase;
+}
+.special-heading h2::before {
+  content: "";
+  width: 70%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: -30px;
+  left: 15%;
+}
+.special-heading h2::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  position: absolute;
+  bottom: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.special-heading p {
+  margin: 70px auto 0;
+  color: var(--grey-color);
+  max-width: 550px;
+  line-height: 2;
+}
+/*end components*/
 
 /*start header*/
 header {
@@ -227,3 +268,50 @@ header i {
   }
 }
 /*end landing section*/
+
+/*start services section*/
+.services {
+  display: flex;
+}
+.services .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 50px;
+  margin-bottom: 70px;
+}
+@media (max-width: 992px) {
+  .services .content {
+    grid-template-columns: 1fr;
+  }
+}
+.services .service {
+  display: flex;
+}
+.services .service i {
+  font-size: 40px;
+  margin-right: 50px;
+}
+@media (max-width: 768px) {
+  .services .service {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services .service i {
+    margin: 0 0 30px 0;
+  }
+  .services .service .text {
+    text-align: center;
+  }
+}
+.services .service h3 {
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.services .service p {
+  color: var(--grey-color);
+  line-height: 2;
+  font-size: 16px;
+}
+/*end services section*/

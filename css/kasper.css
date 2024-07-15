@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-color: #19c8fa;
+  --main-transparent-color: rgb(15 116 143 / 70%);
+  --grey-color: #777;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #333;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*start header*/
+header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  position: relative;
+}
+header .container::after {
+  content: "";
+  height: 1px;
+  width: calc(100% - 30px);
+  position: absolute;
+  left: 15px;
+  bottom: -1px;
+  background-color: var(--grey-color);
+  z-index: -1;
+}
+header img {
+  height: 42px;
+}
+header i.fa-bars {
+  margin-left: auto;
+  height: 100%;
+  line-height: 100px;
+}
+@media (min-width: 768px) {
+  header i.fa-bars {
+    display: none;
+  }
+}
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  height: 100%;
+  line-height: 100px;
+}
+header ul::after {
+  content: "";
+  height: 35%;
+  padding-left: 20px;
+  border-right: 1px solid white;
+}
+header li {
+  height: 100%;
+}
+header a {
+  display: block;
+  padding: 0 10px;
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  font-size: 14px;
+}
+header a.active,
+header a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+@media (max-width: 768px) {
+  header .container {
+    min-width: 100%;
+  }
+  header ul {
+    display: none;
+  }
+  header i.fa-bars::after {
+    content: "";
+    height: 35%;
+    padding-left: 30px;
+    border-right: 1px solid white;
+  }
+  header i.fa-bars:hover + ul {
+    position: absolute;
+    display: flex;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 60%);
+    padding: 0;
+    margin: 0;
+    height: auto;
+    line-height: 50px;
+  }
+  header i.fa-bars:hover + ul li {
+    width: 100%;
+  }
+  header i.fa-bars:hover + ul li a {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+header i {
+  color: white;
+  margin-left: 20px;
+  font-size: 22px;
+}
+/*end header*/
+
+/*start landing section*/
+.landing {
+  display: flex;
+  background-image: url("../images/landing.jpg");
+  height: 100vh;
+  background-size: cover;
+  align-items: center;
+}
+.landing .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 60%);
+}
+.landing :not(.overlay) {
+  z-index: 0;
+}
+.landing .content {
+  background-color: var(--main-transparent-color);
+  color: white;
+  padding: 60px 40px;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .landing .content {
+    width: 100%;
+  }
+}
+.landing .content h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  max-width: 500px;
+  line-height: 1.5;
+}
+.landing .content p {
+  font-size: 14px;
+  line-height: 2;
+  max-width: 500px;
+}
+.landing .nav-arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-size: 22px;
+}
+.landing .nav-circles {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+.landing .nav-circles span {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+.landing .nav-circles span.active {
+  background-color: var(--main-color);
+  border: none;
+}
+@media (max-width: 768px) {
+  .landing .nav-arrows,
+  .landing .nav-circles {
+    display: none;
+  }
+}
+/*end landing section*/

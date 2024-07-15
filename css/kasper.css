@@ -366,3 +366,75 @@ header i {
   margin-right: 1em;
 }
 /*end design section*/
+
+/*start portfolio section*/
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio ul {
+  list-style: none;
+  margin: auto;
+  display: flex;
+  margin-bottom: 60px;
+}
+.portfolio li {
+  padding: 10px;
+}
+.portfolio li.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+}
+@media (min-width: 768px) {
+  .portfolio .gallery {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+@media (min-width: 1220px) {
+  .portfolio .gallery {
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+  }
+}
+.portfolio .gallery .image {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .gallery .image img {
+  width: 100%;
+  transition-duration: 0.3s;
+}
+.portfolio .gallery .image:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio .gallery .image .text {
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: -100%;
+  transition-duration: 0.3s;
+}
+.portfolio .gallery .image:hover .text {
+  margin-bottom: 0;
+}
+.portfolio .gallery .image p:first-child {
+  margin-bottom: 8px;
+}
+.portfolio .gallery .image p:last-child {
+  color: var(--main-color);
+}
+.portfolio > a {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px;
+  width: fit-content;
+  text-transform: uppercase;
+  margin: 20px auto 80px;
+  text-decoration: none;
+}
+/*end portfolio section*/

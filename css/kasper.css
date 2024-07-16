@@ -934,3 +934,66 @@ header i {
   align-self: center;
 }
 /*end subscribe section*/
+
+/*start contact section*/
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact .container {
+  margin-bottom: 80px;
+}
+.contact form {
+  display: flex;
+  gap: 40px;
+}
+.contact form .input-col {
+  display: grid;
+  grid-template-rows: 60px 60px 240px 60px;
+  gap: 30px;
+  flex: 1;
+}
+.contact form input {
+  border: 1px solid #ccc;
+  padding: 20px;
+  caret-color: var(--main-color);
+  display: flex;
+}
+.contact form input:focus {
+  outline: none;
+}
+.contact form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  margin-left: auto;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact form .info-col div:first-child {
+  margin-bottom: 80px;
+}
+.contact form .info-col h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact form .info-col p {
+  color: var(--grey-color);
+  line-height: 2;
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  .contact form {
+    flex-direction: column;
+  }
+  .contact form .input-col {
+    order: 2;
+  }
+  .contact form .info-col {
+    order: 1;
+    margin: auto;
+    text-align: center;
+  }
+}
+/*end contact section*/

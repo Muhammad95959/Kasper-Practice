@@ -481,3 +481,24 @@ header i {
   color: inherit;
 }
 /*end video section*/
+
+/*start about section*/
+.about .image {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+.about img {
+  max-width: 100%;
+  position: relative;
+  top: 120px;
+  margin-top: -120px;
+}
+@media (max-width: 768px) {
+  .about img {
+    top: 80px;
+    margin-top: -80px;
+  }
+}
+/*end about section*/

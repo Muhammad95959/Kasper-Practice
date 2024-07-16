@@ -187,6 +187,7 @@ header i {
   color: white;
   margin-left: 20px;
   font-size: 22px;
+  cursor: pointer;
 }
 /*end header*/
 
@@ -242,6 +243,9 @@ header i {
   color: white;
   font-size: 22px;
 }
+.landing .nav-arrows i {
+  cursor: pointer;
+}
 .landing .nav-circles {
   position: absolute;
   bottom: 0;
@@ -256,6 +260,7 @@ header i {
   width: 20px;
   height: 20px;
   margin: 3px;
+  cursor: pointer;
 }
 .landing .nav-circles span.active {
   background-color: var(--main-color);
@@ -380,6 +385,7 @@ header i {
 }
 .portfolio li {
   padding: 10px;
+  cursor: pointer;
 }
 .portfolio li.active {
   background-color: var(--main-color);
@@ -565,3 +571,153 @@ header i {
   font-size: 14px;
 }
 /*end stats section*/
+
+/*start skills section*/
+.skills {
+  display: flex;
+  justify-content: center;
+}
+.skills .container {
+  display: flex;
+  margin: 80px auto;
+  justify-content: space-between;
+}
+.skills .col1,
+.skills .col2 {
+  flex: 1;
+}
+@media (max-width: 992px) {
+  .skills .container {
+    flex-wrap: wrap;
+  }
+  .skills .col1 {
+    margin-bottom: 40px;
+  }
+  .skills .col1, .skills .col2 {
+    min-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .skills .col1, .skills .col2 {
+    max-width: 420px;
+  }
+}
+@media (min-width: 1200px) {
+  .skills .col1, .skills .col2 {
+    max-width: 500px;
+  }
+}
+.skills .col1 h4,
+.skills .col2 h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.skills .col1 > p,
+.skills .col2 > p {
+  color: var(--grey-color);
+  margin: 0 auto 60px;
+  line-height: 2;
+  text-align: center;
+}
+.skills .col1 .content {
+  display: grid;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+.skills .col1 .review {
+  display: flex;
+}
+.skills .col1 .review img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+@media (max-width: 768px) {
+  .skills .col1 .review {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .skills .col1 .review img{
+    margin: 0 0 20px 0;
+  }
+}
+.skills .col1 .review .text {
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+}
+.skills .col1 .review .text .name {
+  color: var(--grey-color);
+  font-size: 14px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.skills .col1 .nav-circles {
+  text-align: center;
+}
+.skills .col1 .nav-circles span {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  width: 13px;
+  height: 13px;
+  margin: 3px;
+  cursor: pointer;
+}
+.skills .col1 .nav-circles span.active {
+  background-color: var(--main-color);
+  border: none;
+}
+.skills .col2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills .col2 .content {
+  display: grid;
+  gap: 50px;
+  width: 100%;
+}
+.skills .col2 .skill > p {
+  margin-bottom: 10px;
+}
+.skills .col2 .skill .bar {
+  height: 30px;
+  width: 100%;
+  background-color: #dedadc;
+  position: relative;
+}
+.skills .col2 .skill .bar p[style] {
+  background-color: var(--main-color);
+  height: 30px;
+}
+.skills .col2 .skill .bar p.percent {
+  position: absolute;
+  top: -35px;
+  background-color: black;
+  color: white;
+  height: fit-content;
+  padding: 3px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  transform: translateX(-50%);
+}
+.skills .col2 .skill .bar p.percent::after {
+  content: "";
+  position: absolute;
+  border: 10px solid;
+  border-color: black transparent transparent transparent;
+  bottom: -17px;
+  z-index: -1;
+}
+/*end skills section*/

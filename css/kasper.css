@@ -593,17 +593,20 @@ header i {
   .skills .col1 {
     margin-bottom: 40px;
   }
-  .skills .col1, .skills .col2 {
+  .skills .col1,
+  .skills .col2 {
     min-width: 100%;
   }
 }
 @media (min-width: 992px) {
-  .skills .col1, .skills .col2 {
+  .skills .col1,
+  .skills .col2 {
     max-width: 420px;
   }
 }
 @media (min-width: 1200px) {
-  .skills .col1, .skills .col2 {
+  .skills .col1,
+  .skills .col2 {
     max-width: 500px;
   }
 }
@@ -642,7 +645,7 @@ header i {
     text-align: center;
     align-items: center;
   }
-  .skills .col1 .review img{
+  .skills .col1 .review img {
     margin: 0 0 20px 0;
   }
 }
@@ -721,3 +724,43 @@ header i {
   z-index: -1;
 }
 /*end skills section*/
+
+/*start quote section*/
+.quote {
+  background-image: url("../images/quote.jpg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.quote::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 80%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.quote .container {
+  position: relative;
+  z-index: 1;
+  margin: 100px 0;
+  text-align: center;
+  color: white;
+}
+.quote q {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.quote q::before,
+.quote q::after {
+  content: "";
+}
+.quote i {
+  font-size: 20px;
+}
+.quote p {
+  margin-top: 20px;
+}
+/*end quote section*/

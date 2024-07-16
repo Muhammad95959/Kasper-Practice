@@ -764,3 +764,95 @@ header i {
   margin-top: 20px;
 }
 /*end quote section*/
+
+/*start pricing section*/
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing .container {
+  margin-bottom: 80px;
+}
+.pricing .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 50px;
+  row-gap: 100px;
+  margin-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .pricing .content {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .pricing .content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.pricing .content .package {
+  text-align: center;
+}
+.pricing .package p {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-top: 1px solid var(--main-color);
+}
+.pricing .package h2 {
+  position: relative;
+  font-size: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .package h2::before {
+  content: "$";
+  position: absolute;
+  left: calc(50% - 60px);
+  font-size: 24px;
+  font-weight: normal;
+}
+.pricing .package h2::after {
+  content: "/Mo";
+  position: absolute;
+  top: 2em;
+  right: calc(50% - 80px);
+  font-size: 20px;
+}
+.pricing .package ul {
+  list-style: none;
+  border-bottom: 1px solid var(--main-color);
+  margin-bottom: 40px;
+}
+.pricing .package li {
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+}
+.pricing .package li:not(:last-child) {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .package a {
+  padding: 20px;
+  border: 1px solid var(--main-color);
+  color: inherit;
+  text-decoration: none;
+}
+.pricing .container > p {
+  font-size: 20px;
+  width: fit-content;
+  margin: 0 auto 30px;
+}
+.pricing .container > a {
+  display: block;
+  width: fit-content;
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: white;
+  padding: 15px 30px;
+  margin: auto;
+}
+/*end pricing section*/

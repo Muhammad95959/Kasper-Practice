@@ -953,14 +953,19 @@ header i {
   gap: 30px;
   flex: 1;
 }
-.contact form input {
+.contact form input,
+.contact form textarea {
   border: 1px solid #ccc;
   padding: 20px;
   caret-color: var(--main-color);
   display: flex;
 }
-.contact form input:focus {
+.contact form input:focus,
+.contact form textarea:focus {
   outline: none;
+}
+.contact form textarea {
+  resize: none;
 }
 .contact form input[type="submit"] {
   background-color: var(--main-color);
